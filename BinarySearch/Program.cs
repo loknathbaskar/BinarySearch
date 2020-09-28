@@ -11,7 +11,7 @@ public class Node
 
 	public Node(int d)
 	{
-		data = d;
+        data = d;
 		left = right = null;
 	}
 }
@@ -21,17 +21,13 @@ public class BinaryTree
 
 	public static Node head;
 
-	/* Given a binary search tree and a number, 
-	inserts a new node with the given number in 
-	the correct place in the tree. Returns the new 
-	root pointer which the caller should then use 
-	(the standard trick to avoid using reference 
+	/* Given a binary search tree and a number,inserts a new node with the given number in the correct place in the tree. 
+	 * Returns the new root pointer which the caller should then use (the standard trick to avoid using reference 
 	parameters). */
 	public virtual Node insert(Node node, int data)
 	{
 
-		/* 1. If the tree is empty, return a new,	 
-		single node */
+		/* 1. If the tree is empty, return a new, single node */
 		if (node == null)
 		{
 			return (new Node(data));
@@ -54,10 +50,8 @@ public class BinaryTree
 		}
 	}
 
-	/* Given a non-empty binary search tree, 
-	return the minimum data value found in that 
-	tree. Note that the entire tree does not need 
-	to be searched. */
+	/* Given a non-empty binary search tree, return the minimum data value found in that tree. 
+	 * Note that the entire tree does not need to be searched. */
 	public virtual int minvalue(Node node)
 	{
 		Node current = node;
@@ -82,6 +76,7 @@ public class BinaryTree
 		tree.insert(root, 6);
 		tree.insert(root, 5);
 
+		Console.WriteLine(root);
 		Console.WriteLine("Minimum value of BST is " + tree.minvalue(root));
 	}
 }
